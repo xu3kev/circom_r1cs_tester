@@ -1,14 +1,14 @@
 {
-  "name": "circom_tester",
-  "version": "0.0.9",
-  "description": "Tools for testing circom circuits.",
+  "name": "circom_r1cs_tester",
+  "version": "0.0.1",
+  "description": "Tools for testing circom circuits r1cs constraints.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iden3/circom_tester.git"
+    "url": "git+https://github.com/xu3kev/circom_r1cs_tester.git"
   },
   "keywords": [
     "circom",
@@ -16,13 +16,14 @@
     "snarkjs",
     "iden3"
   ],
-  "author": "Albert Rubio",
+  "author": "Wen-Ding Li",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/iden3/circom_tester/issues"
+    "url": "https://github.com/xu3kev/circom_r1cs_tester/issues"
   },
-  "homepage": "https://github.com/iden3/circom_tester#readme",
+  "homepage": "https://github.com/xu3kev/circom_r1cs_tester#readme",
   "dependencies": {
+    "circom_tester": "0.0.9",
     "chai": "^4.3.4",
     "child_process": "^1.0.2",
     "ffjavascript": "^0.2.38",
