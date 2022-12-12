@@ -17,22 +17,29 @@ x0 = R.gen(_sage_const_0 )
 #l.append(x0-1)
 I = ideal(l)
 B = I.groebner_basis()
-try:
-    ans = ideal(B).variety()
-except:
-    #print(B)
-    print("Error: solutions might Not be unique")
-    raise "variety dimension might > 0"
-if len(ans)>_sage_const_1 :
-    print("Solution Not Unique")
-    raise "More than 1"
+#print('-----')
 #print(B)
-#print(ans)
-ans = ans[_sage_const_0 ]
-#print('??????')
-#print(ans)
-#print('??????')
-s = ",".join(['"' + str(k)[_sage_const_1 ::] + '"' +  ': "' + str(v) + '"' for k,v in ans.items()])
-print("{" + s + "}")
-        
+print('{"basis":"' + str(B) + '"}')
+
+
+
+
+
+#try:
+#    ans = ideal(B).variety()
+#except:
+#    #print(B)
+#    print("Error: solutions might Not be unique")
+#    raise "variety dimension might > 0"
+#if len(ans)>1:
+#    print("Solution Not Unique")
+#    raise "More than 1"
+#
+##print(ans)
+#ans = ans[0]
+##print('??????')
+##print(ans)
+##print('??????')
+#s = ",".join(['"' + str(k)[1::] + '"' +  ': "' + str(v) + '"' for k,v in ans.items()])
+#print("{" + s + "}")
 
