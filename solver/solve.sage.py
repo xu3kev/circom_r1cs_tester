@@ -9,10 +9,12 @@ num = int(input())
 eqs = input()
 p = _sage_const_21888242871839275222246405745257275088548364400416034343698204186575808495617 
 R = PolynomialRing(GF(p), num, 'x')
+#print(num)
 d = {'x'+str(i):R.gen(i) for i in range(num)}
+#print(d)
 l = sage_eval(eqs, d)
 x0 = R.gen(_sage_const_0 )
-l.append(x0-_sage_const_1 )
+#l.append(x0-1)
 I = ideal(l)
 B = I.groebner_basis()
 try:
@@ -24,8 +26,12 @@ except:
 if len(ans)>_sage_const_1 :
     print("Solution Not Unique")
     raise "More than 1"
-ans = ans[_sage_const_0 ]
+#print(B)
 #print(ans)
+ans = ans[_sage_const_0 ]
+#print('??????')
+#print(ans)
+#print('??????')
 s = ",".join(['"' + str(k)[_sage_const_1 ::] + '"' +  ': "' + str(v) + '"' for k,v in ans.items()])
 print("{" + s + "}")
         
